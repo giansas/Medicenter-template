@@ -1,0 +1,403 @@
+*{
+    font-family: Arial; /*aplica-se a tudo*/
+}
+body{
+    /*No pattern margin (de ponta a ponta da página)*/
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    display:flex;
+    justify-content: center;
+    height: 120px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;/*separation by sides*/
+    width: 990px;
+    
+}
+
+img{
+    width: 50px;
+    height: 50px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    padding-right: 100px;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 50px;
+    text-shadow: 2px 2px 0px #BDBDBD;
+    color:#0040FF;
+    
+}  
+.menu{
+    display: flex;
+    align-items:center;
+}
+
+nav ul, /*dentro de nav ul/ dentro de nav li*/
+nav li{
+    list-style: none; /*retira os pontinhos*/
+    margin: 0px;
+    padding:0px;
+
+}
+
+nav ul{
+    display: flex;
+}
+
+nav li{
+    display: block; 
+}
+
+nav a{
+    display:block;
+    padding: 15px;
+    text-decoration: none; /*retira o sublinhado*/
+    text-transform: uppercase;
+    
+}
+
+nav .active a, /*fica em destaque o menu selecionado*/
+nav a:hover{/*ao passar o mouse ele destaca e muda a cor pra identificar*/
+    background-color:#39aae1; 
+    color:white
+}
+
+.resp{
+    display: flex;
+}
+ 
+#banner{
+    display: flex;
+    justify-content: center;
+    background-image:url("doctors-3268434_1920.jpg");
+    background-position: center;
+    background-size: cover; /*em monitores grandes a imagem expande, e em menores ela diminu, tudo para preencher corretamente algo*/
+    height: 800px;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.banner_headline{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.banner_headline h1{
+    color:#FFFFFF;
+    font-size: 50px;
+    text-shadow: 2px 2px 0px #39aae1;
+    margin: 0px;
+    padding: 0px;
+    width: 300px;
+}
+.banner_headline h2{
+    color:#FFFFFF;
+    font-size: 22px;
+    text-shadow: 2px 2px 0px #39aae1;
+    margin: 0px;
+    padding: 0px;
+    width: 300px;
+    margin-top: 30px;
+    
+}
+
+.banner_options{
+    height: 210px;
+    display: flex;
+}
+.banner1,
+.banner2,
+.banner3{
+    flex:1;
+    color:white;
+    padding: 20px;
+}
+.banner1{
+    background-color: #39aae1;
+}
+.banner2{
+    background-color: #0079c7;
+}
+.banner3{
+    background-color: #2b4c99;
+}
+
+.banner_title{
+    font-size: 21px;
+
+}
+.banner_desc{
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:#FFFFFF
+}
+
+.banner_desc1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color:grey;
+}
+.banner_options a{
+    display:inline-block; /*diminui a area pra acompanhar o texto*/
+    border: 1px solid #FFFFFF;
+    padding: 5px;
+    color:white;
+    font-size: 13px;
+    text-decoration: none; /*tira o sublinhado*/
+}
+
+/*seção de baixo da página*/
+
+#geral{
+    display: flex;
+    justify-content: center;
+}
+#geral section{
+    flex: 2;
+}
+#geral aside{
+    flex: 1;
+}
+
+.widget_title{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.widget_title_text{
+    color:#000000;
+    font-size: 21px;
+    font-weight: bold;
+}
+.widget_title_bar{
+    width: 80px;
+    height: 2px;
+    background-color: #36a9c1;
+    margin-top: 10px;
+}
+
+.widget_section{
+    background-color: #36a9c1;
+    padding-left: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.descrição{
+    width: 170px;
+    height: 150px;
+}
+
+.flex{
+    display: flex; 
+    flex-wrap: wrap; /*da a liberdade de quebrar linhas se estiver nessa condição*/
+
+}
+
+article{
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+}
+article a{
+    text-decoration:none;
+}
+
+article .news_data{
+    display:flex; /*serve pra colocar um item ao lado do outro bonitinho*/
+}
+article .news_posted_at{
+    background-color:#2b4c99;
+    color:#FFFFFF;
+    font-size: 12px;
+    padding: 10px;
+    margin-right: 2px;
+}
+
+article .news_comments{
+    background-color: #39aae1;
+    color:#FFFFFF;
+    font-size: 12px;
+    padding: 10px;
+}
+
+article .news_thumbnail{
+    margin-top: 30px;
+}
+
+article .news_thumbnail img{
+    width: 100%; /*colando altura e largura desse jeito, ao adicionar informações a imagem se ajeita automaticamente*/
+    height: auto;
+    
+}
+
+article .news_title{
+    margin-top:25px;
+    margin-bottom: 25px;
+    color: #000000;
+    font-size: 23px;
+}
+
+article .news_resume{
+    color:#5c5c5c;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+footer{
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_menu{
+    display:flex; /*fica um do lado da outra*/
+}
+.fm_1, .fm_2, .fm_3{
+    flex:1;
+    color: #FFFFFF;
+    padding: 20px; /*espaçamento interno, deixa grosso*/
+}
+
+.fm_1{
+    background-color: #39aae1;
+}
+.fm_2{
+    background-color: #0079c7;
+}
+.fm_3{
+    background-color: #2b4c99;
+}
+
+.footer_menu a{
+    display:block; /*pega toda a area do quadrado*/
+    text-decoration: none;
+    color:#FFFFFF;
+}
+
+.footer_area{
+    display: flex;
+    color:#FFFFFF;
+}
+
+.footer_areaitem{
+    flex:1
+}
+
+.flexColumn{
+    flex-direction: column;
+}
+
+footer .widget_title_text{ /*tudo oq estiver em footer, e quem está em widget_title_text*/
+    color:#FFFFFF;   
+}
+
+.footer_copy{
+    border-top: 1px solid #2c2c2c;
+    height: 40px;
+    line-height: 40px; /*deixa o texto no meio*/
+    color:#5c5c5c;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+.menuMobile{
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.mm_line{
+    height: 2px;
+    background-color: #39aea1;
+}
+@media (max-width:1000px){ /*a partir de 600px pra baixo há essas mudanças*/
+   
+    .banner_headline{
+        padding: 20px;
+    }
+    .banner_headline h1{
+        font-size:55px;
+    }
+    .banner_headline h2{
+        font-size:17px;
+    }
+    .banner_options{
+        height: auto; 
+        flex-direction: column; /*vai deixar a div em colunas, uma em baixo da outra*/
+    }
+    .container{
+        flex-direction: column; /*as noticias tb ficam em coluna aqui*/
+    }
+    #geral section,
+    #geral aside{
+        padding: 20px;
+    }
+
+    .footer_menu{
+        flex-direction: column;
+    }
+    .footer_area{
+        flex-direction: column;
+    }
+    .footer_copy{
+        padding-left: 20px;
+    }
+
+    header .container{
+        flex-direction: row;
+    }
+
+    nav ul{
+        flex-direction: column;
+        display: none; /*assim n aparece o menu inteiro*/
+        position: absolute;
+        left: 0;
+        width:100%; /*para pegar toda a largura do celular que estiver acessando*/
+        background-color:white;
+    }
+
+    header{
+        height: auto; /*usa o espaço necessário automaticamente*/
+    }
+
+    .logo{
+        padding-left: 20px;
+    }
+
+    .menuMobile{
+        display: flex;/*só aparece em tela de celular, caso contrario nem aparece as configurações de menuMobile*/
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+
+} 
+    
